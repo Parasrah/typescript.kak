@@ -1,0 +1,4 @@
+= typescript.kak
+Parasrah <git@parasrah.com>
+
+This plugin focuses to solve minor workflow issues when working on typescript/react projects. As I'm confident in specific changes, I will attempt to contribute them upstream in order to improve the experience for everyone.
