@@ -34,3 +34,7 @@ hook -group typescriptreact-highlight global WinSetOption filetype=typescriptrea
   add-highlighter window/typescriptreact ref typescript
   hook -once -always window WinSetOption filetype=.* %{ remove-highlighter window/typescriptreact }
 }
+
+hook -group typescript global WinSetOption filetype=(typescript|typescriptreact) %{
+    set-option window makecmd "npx tsc --noEmit | rg 'TS\d+:' | sed -E 's/^([^\(]+)\(([0-9]+),([0-9]+)\)/\1:\2:\3/'"
+}
